@@ -110,11 +110,7 @@ class Client:
             iteration += 1
 
     def close(self):
-        # close the connection
-
-        if self.protocol == 'UDP':
-            return
-        
+        # close the connection        
         self.socket.close()
 
 def validate_arguments(arguments):
