@@ -52,7 +52,7 @@ class Server:
 
                     print(f'Client {adr} Disconnected')
 
-                    break;
+                    break
                 
                 clt.send(data)
                     
@@ -65,9 +65,11 @@ class Server:
 
             print(f'{len(data)} bytes received through UDP protocol')
 
-            if len(data) > 0:
+            if not data:
                 
-                self.socket.sendto(data, adr)
+                continue
+                
+            self.socket.sendto(data, adr)
 
 
     def start(self):
