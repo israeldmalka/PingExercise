@@ -1,4 +1,3 @@
-import enum
 import socket
 import argparse
 import enum
