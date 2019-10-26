@@ -148,7 +148,7 @@ def handle_arguments():
 
     # optional arguments : count, timeout and packet size
     
-    parser.add_argument('-c', '--count', help='number of packets to send (default 3)', type=int, default=3)
+    parser.add_argument('-c', '--count', help='number of packets to send (default: 3)', type=int, default=3)
     parser.add_argument('-t','--timeout', help='time to wait for a response in seconds (default: 3)', type=int, default=3)
     parser.add_argument('-s','--packetsize', help='number of databytes to be sent (default: 64)', type=int, default=64)
     arguments = parser.parse_args()
