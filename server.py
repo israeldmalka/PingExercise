@@ -20,7 +20,7 @@ class Protocol(enum.Enum):
         if Protocol.isvalid(name):
             return Protocol._value2member_map_[name]
         else:
-            raise ValueError('Invalid Protocol Name', name)
+            raise ValueError('Invalid Protocol Name:', name)
 
 class Server:
 
