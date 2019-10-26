@@ -46,13 +46,13 @@ class Server:
                 
                 data = clt.recv(self.packet_size)
 
-                print(f'{len(data)} bytes received through TCP protocol') 
-
                 if not data:
 
                     print(f'Client {adr} Disconnected')
 
                     break
+                
+                print(f'{len(data)} bytes received through TCP protocol') 
                 
                 clt.send(data)
                     
