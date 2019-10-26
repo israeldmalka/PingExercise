@@ -1,8 +1,8 @@
 import socket
 import argparse
 import datetime
-import re
 import enum
+import re
 
 class Protocol(enum.Enum):
     
