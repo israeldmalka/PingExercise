@@ -22,7 +22,7 @@ class Protocol(enum.Enum):
         if Protocol.isvalid(name):
             return Protocol._value2member_map_[name]
         else:
-            raise ValueError('Invalid Protocol Name', name)
+            raise ValueError('Invalid Protocol Name:', name)
 
 # decorator to calculate duration in milliseconds
 def calculate_time(function):
