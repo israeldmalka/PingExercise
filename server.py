@@ -46,17 +46,15 @@ class Server:
                 
                 data = clt.recv(self.packet_size)
 
-                print(f'{len(data)} bytes received through TCP protocol')
-
-                if len(data) > 0:
-        
-                    clt.send(data)
+                print(f'{len(data)} bytes received through TCP protocol') 
 
                 if not data:
 
                     print(f'Client {adr} Disconnected')
 
                     break;
+                
+                clt.send(data)
                     
     def udp_start(self):
         # start receiving and resending packages using UDP protocol
