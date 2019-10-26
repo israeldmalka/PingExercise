@@ -63,11 +63,11 @@ class Server:
 
             data, adr = self.socket.recvfrom(self.packet_size)
 
-            print(f'{len(data)} bytes received through UDP protocol')
-
             if not data:
                 
                 continue
+                
+            print(f'{len(data)} bytes received through UDP protocol')
                 
             self.socket.sendto(data, adr)
 
